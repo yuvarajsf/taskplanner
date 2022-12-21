@@ -22,6 +22,7 @@ namespace TaskPlanner.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private string postman_api_key;
+        private string test;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
