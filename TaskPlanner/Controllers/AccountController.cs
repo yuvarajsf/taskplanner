@@ -21,6 +21,7 @@ namespace TaskPlanner.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private string postman_api_key;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
@@ -46,7 +47,7 @@ namespace TaskPlanner.Controllers
         {
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
-
+            this.postman_api_key = "PMAK-63a2a2aa24424161d4de0d15-f22df6a7f4b71a1b643b898f467e12832e";
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
